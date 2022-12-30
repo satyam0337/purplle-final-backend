@@ -12,7 +12,7 @@ productRouter.get("/:id", async (req, res) => {
   try{
     console.log(req.params);
     const id = req.params.id;
-    const product = await ProductModel.find({"_id":id});
+    const product = await ProductModel.find({"id":id});
     res.send(product);
   }
   catch(er){
